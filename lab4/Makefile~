@@ -1,0 +1,10 @@
+all: createThreads parallel1
+
+createThreads: createThreads.c
+	gcc createThreads.c -lpthread -std=c99 -Wno-implicit-function-declaration -o createThreads
+
+parallel2: parallel2.c
+	gcc parallel2.c -lpthread -std=c99 -Wno-implicit-function-declaration -o parallel1
+
+sequential: sequential.c
+	gcc sequential.c -lpthread -std=c99 -Wno-implicit-function-declaration -o sequential
